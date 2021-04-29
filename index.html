@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <!-- 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 
+    Gist ID:083646b24c5ebe4d5c69fd48fe4235a1 -->
+    <!-- https://fonts.google.com/icons -->
+    <style>
+        html,
+        body {
+            width: 1900px;
+            height: 100%;
+
+            padding: 0;
+            margin: 0;
+            background-color: whitesmoke;
+        }
+
+        #top {
+            width: 100%;
+            height: 56px;
+            background: white;
+            position: fixed;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            z-index: 9999;
+            /* position: relative; */
+        }
+
+        #top img {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+
+        }
+
+        #search {
+            width: 566px;
+            height: 27px;
+            border: solid 1px lightgrey;
+            position: absolute;
+            top: 10px;
+            left: 30%;
+        }
+
+        #search:focus {
+            outline: none;
+            border: solid 1px rgb(70, 132, 233);
+            box-shadow:
+                rgba(0, 0, 0, 0.2) 1px 1px 2px 0px inset;
+        }
+
+        .box {
+            background-color: whitesmoke;
+            width: 65px;
+            height: 30px;
+            border: solid 0.5px lightgrey;
+            position: relative;
+            top: 9px;
+            left: 60%;
+        }
+
+
+
+        .box2 {
+            background: white;
+            width: 82px;
+            height: 40px;
+            border: solid 1.5px rgb(70, 132, 233);
+            position: relative;
+            top: -25px;
+            left: 94%;
+            text-align: right;
+            line-height: 40px;
+
+        }
+
+        .box2 img {
+            position: absolute;
+        }
+
+        .box2 span {
+            position: absolute;
+            left: 50%;
+            font-size: 15px;
+            color: rgb(70, 132, 233);
+
+        }
+
+        #menu {
+            width: 240px;
+            height: 95%;
+            background: white;
+            float: left;
+            position: fixed;
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin-top: 50px;
+            cursor: pointer;
+            /* font-family: 'Noto Sans TC', sans-serif; */
+        }
+
+
+        #menu img {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 10%;
+        }
+
+        #menu span {
+            width: 100%;
+            color: black;
+            font-size: 10px;
+            position: absolute;
+            font-size: 15px;
+            left: 30%;
+        }
+
+        #menu p {
+            color: rgb(73, 71, 71);
+            font-size: 10px;
+            position: absolute;
+            font-size: 15px;
+        }
+
+
+        .h {
+            width: 100%;
+            border-top: 1px solid lightgrey;
+            position: absolute;
+
+        }
+
+        #footer {
+            width: 100%;
+            height: 150px;
+            clear: both;
+            background-color: white;
+            position: relative;
+            top: 105%;
+            left: 0%;
+
+        }
+
+        .f {
+            position: absolute;
+            display: block;
+            left: 10%;
+            font-size: 14px;
+            color: rgb(73, 71, 71);
+
+        }
+
+        #video {
+            width: 1660px;
+            height: 100%;
+            float: right;
+            font-size: 0;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+
+        #video div {
+            font-size: 1 rem;
+            display: inline-block;
+            margin: 10px 28px 5px;
+        }
+
+        .v1 {
+            font-size: 1;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #pic {
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+            position: absolute;
+        }
+
+
+        .v1 span {
+            font-size: 12px;
+            color: gray;
+            position: relative;
+            top: 0px;
+            left: 37px;
+        }
+
+        .v1 img {
+            width: 340px;
+            height: 200px;
+        }
+
+        #m {
+            width: 240px;
+            height: 42px;
+            background-color: rgb(221, 220, 220);
+        }
+
+        #m:hover {
+            background-color: rgb(202, 199, 199);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="top">
+        <img style="top: 15px;left: 20px;" src="./images/menu.png">
+        <img style="width:80px;height:24px;position:absolute;top: 15px;left: 70px;" src="./images/logo.png">
+        <input type="" value="搜尋" id="search">
+        <div class="box"> <img style="width:15px;height:15px;position:absolute;top: 10px;left: 25px;"
+                src="./images/search.png"></div>
+        <img style="top: 12.5px;left: 64%;" src="./images/mic.png">
+        <img style="top: 15px;right: 10%;" src="./images/set1.png">
+        <img style="top: 15px;right: 7%;" src="./images/set2.png">
+        <div class="box2">
+            <img style="top: 8px;left: 10px;" src="./images/log.png">
+            <span>登入</span>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------------------------- -->
+    <div id="menu">
+        <div id="m"><img style="top:1.5%;" src="./images/home.png">
+            <span style="top:1.5%;">首頁</span>
+        </div>
+        <div><img style="top:6%" src="./images/images.png">
+            <span style="top:6%">探索</span>
+        </div>
+        <div>
+            <img style="top:10.5%" src="./images/good.png">
+
+            <span style="top:10.5%">訂閱內容
+                <hr class="h">
+            </span>
+
+        </div>
+
+
+        <div><img style="top: 15.5%" src="./images/media.png">
+            <span style="top:15.5%;left:30%;">媒體庫</span>
+        </div>
+
+        <div class="hrbox">
+            <img style="top:20%" src="./images/history.png">
+            <span style="top:20%;left:30%;">觀看紀錄
+                <hr class="h">
+            </span>
+
+        </div>
+
+        <p style="top:25%;left:10%;">登入帳戶即可對影片表示喜歡、發布留言及訂閱頻道。</p>
+        <div class="box2" style="top:28%;left:12%;">
+            <img style="top: 22%;left: 10%;" src="./images/log.png">
+            <span style="top: 0%;left: -10%; color: rgb(70, 132, 233); ">登入</span>
+            <!-- <hr class="h" style="top:120%"> -->
+        </div>
+
+        <p style="top:38%;left: 30px;">YOUTUBE 精選</p>
+
+        <div>
+            <img style="top:44%" src="./images/music.png">
+            <span style="top:44%;left:30%;">音樂</span>
+        </div>
+
+        <div>
+            <img style="top:48%" src="./images/trophy.png">
+            <span style="top:48%;left:30%;">體育</span>
+        </div>
+
+        <div>
+            <img style="top:52%" src="./images/game.png">
+            <span style="top:52%;left:30%;">遊戲</span>
+        </div>
+
+        <div>
+            <img style="top:56%" src="./images/news.png">
+            <span style="top:56%;left:30%;">新聞</span>
+        </div>
+
+        <div>
+            <img style="top:60%" src="./images/live2.png">
+            <span style="top:60%;left:30%;">直播</span>
+        </div>
+
+        <div>
+            <img style="top:64%" src="./images/360.png">
+            <span style="top:64%;left:30%;">360度影片
+                <hr class="h">
+            </span>
+        </div>
+        <div>
+            <img style="top:70%" src="./images/plus.png">
+            <span style="top:70%;left:30%;">瀏覽頻道
+                <hr class="h">
+            </span>
+        </div>
+        <p style="top:74%;left:10%;">更多YOUTUBE功能</p>
+        <div>
+            <img style="top:80%" src="./images/youtube2.png">
+            <span style="top:80%;left:30%;">Youtube Premium</span>
+        </div>
+        <div>
+            <img style="top:84%" src="./images/live.png">
+            <span style="top:84%;left:30%;">直播
+                <hr class="h">
+            </span>
+        </div>
+
+        <div>
+            <img style="top: 90% " src="./images/sett.png">
+            <span style="top:90%;left:30%;">設定</span>
+        </div>
+
+        <div>
+            <img style="top: 95% " src="./images/flag.png">
+            <span style="top:95%;left:30%;">檢舉紀錄</span>
+        </div>
+
+        <div>
+            <img style="top: 100% " src="./images/question.png">
+            <span style="top:100%;left:30%;">說明</span>
+        </div>
+
+        <div>
+            <img style="top: 105% " src="./images/info.png">
+            <span style="top:105%;left:30%;">提供意見
+                <hr class="h">
+            </span>
+        </div>
+
+        <div id="footer">
+            <div class="f">簡介 媒體 版權 與我們聯絡 <br>創作者 廣告 開發人員 </div>
+            <div class="f" style="top:35%;">條款 隱私權 政策與安全性 Youtube運作方式 測試新功能</div>
+            <div class="f" style="top:75%;color: rgb(160, 158, 158);">© 2021 Google LLC</div>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------------------------- -->
+    <div id="video">
+        <div class="v1">
+            <div>
+                <img src="https://i.ytimg.com/vi/QEDFVRnEb3s/mqdefault.jpg">
+                <p><img id="pic" src="https://picsum.photos/36/36/?random=1"></p>
+                <p style="position: relative;top:5px;left: 40px;"> 吉卜力 | 霍爾的移動城堡 | 魔法世界經典早餐</p>
+                <p><span>Taiko TeamFish/コトペモ <br>觀看次數：6.6萬次‧1週前</span>
+                </p>
+            </div>
+
+            <div>
+                <img src="https://i.ytimg.com/vi/4uCJFU3x8eY/mqdefault.jpg">
+                <p><img id="pic" src="https://picsum.photos/36/36/?random=2"></p>
+                <p style="position: relative;top:5px;left: 40px;">太鼓達人把VPN切換到日本的話能不能玩版權歌呢?</p>
+                <p><span>Taiko TeamFish/コトペモ<br> 觀看次數：1.5萬次‧1週前</span>
+                </p>
+            </div>
+
+            <div>
+                <img src="https://i.ytimg.com/vi/tf_B-n7LXl8/mqdefault.jpg">
+                <p><img id="pic" src="https://picsum.photos/36/36/?random=3"></p>
+                <p style="position: relative;top:5px;left: 40px;">這名字到底要老師上課怎麼點名？唸出來也太害羞</p>
+                <p><span>阿財R墨鏡哥の小夥伴 <br>觀看次數：17萬次‧1週前</span></p>
+            </div>
+
+            <div>
+                <img src="https://i.ytimg.com/vi/BafmyJHrhkU/mqdefault.jpg">
+                <p><img id="pic" src="https://picsum.photos/36/36/?random=4"></p>
+                <p style="position: relative;top:5px;left: 40px;">海綿寶寶 費加洛</p>
+                <p><span>章魚哥.告訴自己假裝沒看到 <br>觀看次數：22萬次‧1年前</span></p>
+            </div>
+
+            <div>
+                <img src="https://i.ytimg.com/vi/0--vqF-g8k8/mqdefault.jpg">
+                <p><img id="pic" src="https://picsum.photos/36/36/?random=5"></p>
+                <p style="position: relative;top:5px;left: 40px;">だんだんホラーになってくるカップヌードルcm</p>
+                <p><span>tanaka hantou / 田中半島 <br>觀看次數：136萬次‧2週前</span></p>
+            </div>
+
+            <div>
+                <img src="https://i.ytimg.com/vi/twh5DukfLdM/mqdefault.jpg">
+                <p><img id="pic" src="https://picsum.photos/36/36/?random=6"></p>
+                <p style="position: relative;top:5px;left: 40px;">【官方】《寶可夢傳說 阿爾宙斯》首次公開影片</p>
+                <p><span>寶可夢 台灣 <br>觀看次數：14萬次‧2個月前</span></p>
+            </div>
+
+            <div>
+                <img src="https://i.ytimg.com/vi/CZLrufldJpY/mqdefault.jpg">
+                <p><img id="pic" src="https://picsum.photos/36/36/?random=7"></p>
+                <p style="position: relative;top:5px;left: 40px;">海綿寶寶 防疫專家</p>
+                <p><span>海綿寶寶.SpongeBob SquarePants <br>觀看次數：5.3萬次‧10個月前</span></p>
+            </div>
+
+            <div>
+                <img src="https://i.ytimg.com/vi/BoZ0Zwab6Oc/mqdefault.jpg">
+                <p><img id="pic" src="https://picsum.photos/36/36/?random=8"></p>
+                <p style="position: relative;top:5px;left: 40px;">【Official】 | BUMP OF CHICKEN - Acacia</p>
+                <p><span>ポケモン公式YouTubeチャンネル<br> 觀看次數：3963萬次‧6個月前</span></p>
+            </div>
+            <hr style="border:2px solid lightgrey;">
+            <p class="vp"> 發燒影片</p>
+            <div>
+                <img src="https://i.ytimg.com/vi/rJQx0VH3mI0/mqdefault.jpg">
+                <p><img id="pic" src="https://picsum.photos/36/36/?random=9"></p>
+                <p style="position: relative;top:5px;left: 40px;">Pokémon Presents 2021.02.26</p>
+                <p><span>寶可夢 台灣 <br>觀看次數：6.9萬次‧2個月前</span></p>
+            </div>
+
+            <div>
+                <img src="https://i.ytimg.com/vi/ruaKY8lGBbg/mqdefault.jpg">
+                <p><img id="pic" src="https://picsum.photos/36/36/?random=10"></p>
+                <p style="position: relative;top:5px;left: 40px;">【忍笑大挑戰31集】每笑一次就吃一片香菜！</p>
+                <p><span>三度 <br>觀看次數：264萬次‧6個月前</span></p>
+            </div>
+
+            <div>
+                <img src="https://i.ytimg.com/vi/eDG7uO4WG5A/mqdefault.jpg">
+                <p><img id="pic" src="https://picsum.photos/36/36/?random=11"></p>
+                <p style="position: relative;top:5px;left: 40px;">那些國小生作業的神回覆【第一集】</p>
+                <p><span>三度<br>觀看次數：151萬次‧7個月前</span></p>
+            </div>
+            <div>
+                <img src="https://i.ytimg.com/vi/vc7BDsBoPms/mqdefault.jpg">
+                <p><img id="pic" src="https://picsum.photos/36/36/?random=12"></p>
+                <p style="position: relative;top:5px;left: 40px;">Onion Man | 阿嬤的愛心口香糖</p>
+                <p><span>Onion Man<br> 觀看次數：54萬次‧2天前</span></p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
